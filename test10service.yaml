@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: test10
-  namespace: test10
+  namespace: default
   labels:
     app: test10
 spec:
