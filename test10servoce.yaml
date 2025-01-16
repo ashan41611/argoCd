@@ -1,0 +1,17 @@
+# Service configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: test10
+  namespace: test10
+  labels:
+    app: test10
+spec:
+  selector:
+    app: test10
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30010
+  type: NodePort

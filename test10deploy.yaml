@@ -1,0 +1,23 @@
+# Deployment configuration
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test10
+  namespace: test10
+  labels:
+    app: test10
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test10
+  template:
+    metadata:
+      labels:
+        app: test10
+    spec:
+      containers:
+      - name: test10
+        image: alirathore412/react-weather-app:latest
+        ports:
+        - containerPort: 80
